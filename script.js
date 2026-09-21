@@ -43,20 +43,35 @@ if ('IntersectionObserver' in window) {
 
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const button = contactForm.querySelector('button[type="submit"]');
+    if (!button) return;
 
-    if (button) {
-      const defaultText = button.textContent;
-      button.textContent = 'Mensaje enviado';
-      button.disabled = true;
-      contactForm.reset();
+    const defaultText = button.textContent;
+    button.disabled = true;
+    button.textContent = 'Enviando...';
 
-      window.setTimeout(() => {
-        button.textContent = defaultText;
-        button.disabled = false;
-      }, 1800);
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (response.ok) {
+        button.textContent = 'Mensaje enviado';
+        contactForm.reset();
+      } else {
+        button.textContent = 'Error, intenta de nuevo';
+      }
+    } catch (error) {
+      button.textContent = 'Error, intenta de nuevo';
     }
+
+    window.setTimeout(() => {
+      button.textContent = defaultText;
+      button.disabled = false;
+    }, 2500);
   });
 }
