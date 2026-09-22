@@ -2,7 +2,7 @@ const THEME_KEY = 'devquad-theme';
 const themeToggles = document.querySelectorAll('.theme-toggle');
 
 function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.dataset.theme = theme;
   themeToggles.forEach((btn) => {
     btn.setAttribute('aria-pressed', String(theme === 'dark'));
     btn.setAttribute('aria-label', theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
@@ -27,7 +27,7 @@ applyTheme(getPreferredTheme());
 
 themeToggles.forEach((btn) => {
   btn.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const current = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
     const next = current === 'dark' ? 'light' : 'dark';
     applyTheme(next);
     try {
@@ -115,7 +115,7 @@ if (statNumbers.length) {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           const el = entry.target;
-          const target = parseInt(el.dataset.target, 10);
+          const target = Number.parseInt(el.dataset.target, 10);
           if (Number.isNaN(target)) return;
 
           const duration = 800;
