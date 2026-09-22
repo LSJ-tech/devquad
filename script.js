@@ -66,6 +66,7 @@ if (contactForm) {
         button.textContent = 'Error, intenta de nuevo';
       }
     } catch (error) {
+      console.error('Error al enviar el formulario de contacto:', error);
       button.textContent = 'Error, intenta de nuevo';
     }
 
