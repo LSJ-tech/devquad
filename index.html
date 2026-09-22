@@ -39,7 +39,7 @@
     <link rel="icon" href="./favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
     <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="style.css?v=14" />
+    <link rel="stylesheet" href="style.css?v=15" />
     <script src="script.js?v=12" defer></script>
   </head>
   <body>
@@ -166,11 +166,18 @@
           </div>
 
           <div class="about-visual reveal" aria-hidden="true">
-            <div class="quad-grid quad-grid-about">
-              <div class="quad-tile"></div>
-              <div class="quad-tile"></div>
-              <div class="quad-tile"></div>
-              <div class="quad-tile quad-tile-accent"></div>
+            <div class="terminal-mock">
+              <div class="terminal-mock-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="terminal-mock-body">
+                <p class="terminal-line-cmd"><span class="terminal-prompt">$</span>devquad deploy</p>
+                <p class="terminal-line-muted">Compilando proyecto...</p>
+                <p class="terminal-line-muted">Ejecutando tests...</p>
+                <p class="terminal-line-success">✓ Deploy completado</p>
+              </div>
             </div>
           </div>
         </div>
