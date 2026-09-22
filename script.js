@@ -1,6 +1,15 @@
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
 const navLinks = document.querySelectorAll('.main-nav a');
+const siteHeader = document.querySelector('.site-header');
+
+if (siteHeader) {
+  const updateHeaderShadow = () => {
+    siteHeader.classList.toggle('scrolled', window.scrollY > 10);
+  };
+  updateHeaderShadow();
+  window.addEventListener('scroll', updateHeaderShadow, { passive: true });
+}
 
 if (navToggle && mainNav) {
   navToggle.addEventListener('click', () => {
@@ -56,6 +65,41 @@ if (sectionLinks.size && 'IntersectionObserver' in window) {
 const currentYear = document.getElementById('year');
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
+}
+
+const statNumbers = document.querySelectorAll('.stat-number');
+if (statNumbers.length) {
+  if ('IntersectionObserver' in window) {
+    const statObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          if (Number.isNaN(target)) return;
+
+          const duration = 800;
+          const start = performance.now();
+
+          const step = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            el.textContent = Math.round(progress * target);
+            if (progress < 1) requestAnimationFrame(step);
+          };
+
+          requestAnimationFrame(step);
+          statObserver.unobserve(el);
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    statNumbers.forEach((el) => statObserver.observe(el));
+  } else {
+    statNumbers.forEach((el) => {
+      el.textContent = el.dataset.target;
+    });
+  }
 }
 
 const revealItems = document.querySelectorAll('.reveal');
