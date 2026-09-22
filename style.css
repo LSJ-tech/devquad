@@ -521,7 +521,7 @@ p {
   transition: background 0.25s ease;
 }
 
-[data-theme="dark"] .quad-tile {
+[data-theme="dark"] .quad-tile:not(.quad-tile-accent) {
   background: #33447e;
 }
 
