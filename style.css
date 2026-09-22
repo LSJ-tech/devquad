@@ -137,6 +137,14 @@ body {
   background:
     radial-gradient(circle at top, rgba(216, 172, 89, 0.06), transparent 40%),
     linear-gradient(180deg, #0a0f22 0%, #0d1330 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  letter-spacing: -0.02em;
 }
 
 img {
@@ -289,6 +297,18 @@ p {
   height: auto;
   max-height: 54px;
   object-fit: contain;
+}
+
+.brand-logo-dark {
+  display: none;
+}
+
+[data-theme="dark"] .brand-logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .brand-logo-dark {
+  display: block;
 }
 
 .nav-toggle {
@@ -464,9 +484,16 @@ p {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: #142143;
   color: #fff;
   box-shadow: 0 16px 28px rgba(20, 33, 67, 0.25);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-theme="dark"] .btn-primary {
+  background: var(--accent);
+  color: #1a1206;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.4);
 }
 
 .btn-secondary {
