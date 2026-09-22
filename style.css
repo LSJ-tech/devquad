@@ -293,6 +293,50 @@ p {
   font-size: 0.82rem;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.about-copy {
+  font-size: 1.02rem;
+  color: var(--muted);
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.feature-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+}
+
+.about-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.quad-grid-about {
+  width: min(100%, 360px);
+}
+
 .services {
   background: rgba(255, 255, 255, 0.35);
 }
@@ -533,6 +577,7 @@ textarea {
 
 @media (max-width: 900px) {
   .hero-grid,
+  .about-grid,
   .contact-wrap {
     grid-template-columns: 1fr;
   }

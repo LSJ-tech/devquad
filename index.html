@@ -7,7 +7,32 @@
       name="description"
       content="DevQuad es un equipo de desarrollo de software. Pensamos, desarrollamos y ejecutamos soluciones digitales a medida."
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#142143" />
+    <link rel="canonical" href="https://devquad.cl/" />
     <title>DevQuad | Piensa, desarrolla, ejecuta</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DevQuad" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:url" content="https://devquad.cl/" />
+    <meta property="og:title" content="DevQuad | Piensa, desarrolla, ejecuta" />
+    <meta
+      property="og:description"
+      content="DevQuad es un equipo de desarrollo de software. Pensamos, desarrollamos y ejecutamos soluciones digitales a medida."
+    />
+    <meta property="og:image" content="https://devquad.cl/img/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DevQuad | Piensa, desarrolla, ejecuta" />
+    <meta
+      name="twitter:description"
+      content="DevQuad es un equipo de desarrollo de software. Pensamos, desarrollamos y ejecutamos soluciones digitales a medida."
+    />
+    <meta name="twitter:image" content="https://devquad.cl/img/og-image.png" />
+
     <link rel="icon" type="image/svg+xml" href="./devquad-logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,8 +40,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=3" />
-    <script src="script.js?v=3" defer></script>
+    <link rel="stylesheet" href="style.css?v=4" />
+    <script src="script.js?v=4" defer></script>
   </head>
   <body>
     <header class="site-header" id="top">
@@ -39,6 +64,7 @@
 
         <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
           <a href="#top" class="active">Inicio</a>
+          <a href="#about">Nosotros</a>
           <a href="#services">Servicios</a>
           <a href="#team">Equipo</a>
           <a href="#contact">Contacto</a>
@@ -78,6 +104,46 @@
                 <strong>1</strong>
                 <span>equipo, un mismo objetivo</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container section-heading reveal">
+          <p class="kicker">Quiénes somos</p>
+          <h2>Un equipo pequeño, pensado para moverse rápido.</h2>
+        </div>
+
+        <div class="container about-grid">
+          <div class="about-copy reveal">
+            <p>
+              DevQuad nace de cuatro desarrolladores que preferimos trabajar
+              sin capas intermedias: los mismos que diseñan la solución son
+              los que la programan y la entregan. Eso significa comunicación
+              directa, decisiones rápidas y un producto que responde a lo que
+              tu proyecto realmente necesita.
+            </p>
+            <p>
+              Trabajamos bajo una idea simple: primero pensamos el problema a
+              fondo, luego lo desarrollamos con buenas prácticas, y por
+              último lo ejecutamos y acompañamos hasta que funcione en
+              producción.
+            </p>
+
+            <ul class="feature-list">
+              <li>Comunicación directa con quien programa tu proyecto.</li>
+              <li>Sin capas intermedias ni tercerización.</li>
+              <li>Código pensado para escalar y mantenerse en el tiempo.</li>
+            </ul>
+          </div>
+
+          <div class="about-visual reveal" aria-hidden="true">
+            <div class="quad-grid quad-grid-about">
+              <div class="quad-tile"></div>
+              <div class="quad-tile"></div>
+              <div class="quad-tile"></div>
+              <div class="quad-tile quad-tile-accent"></div>
             </div>
           </div>
         </div>
@@ -210,6 +276,7 @@
       <div class="container footer-wrap">
         <p>© <span id="year"></span> DevQuad</p>
         <div class="footer-links">
+          <a href="#about">Nosotros</a>
           <a href="#services">Servicios</a>
           <a href="#team">Equipo</a>
           <a href="#contact">Contacto</a>
