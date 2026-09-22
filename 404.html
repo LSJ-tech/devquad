@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#142143" />
+    <title>Página no encontrada | DevQuad</title>
+
+    <link rel="icon" type="image/svg+xml" href="./devquad-logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=7" />
+    <script src="script.js?v=7" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html" aria-label="Inicio de DevQuad">
+          <img src="./devquad-logo.svg" alt="Logo DevQuad" class="brand-logo" />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section not-found">
+        <div class="container not-found-content reveal">
+          <div class="quad-grid quad-grid-404" aria-hidden="true">
+            <div class="quad-tile"></div>
+            <div class="quad-tile quad-tile-accent"></div>
+            <div class="quad-tile quad-tile-accent"></div>
+            <div class="quad-tile"></div>
+          </div>
+          <p class="kicker">Error 404</p>
+          <h1>Esta página no existe.</h1>
+          <p class="lead">
+            El enlace que seguiste puede estar roto o la página fue movida.
+          </p>
+          <a class="btn btn-primary" href="./index.html">Volver al inicio</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> DevQuad</p>
+      </div>
+    </footer>
+  </body>
+</html>
