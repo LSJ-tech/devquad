@@ -20,6 +20,15 @@
   box-sizing: border-box;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -58,6 +67,7 @@ textarea {
 .section {
   position: relative;
   padding: 7rem 0;
+  scroll-margin-top: 96px;
 }
 
 .section-heading {
@@ -613,6 +623,26 @@ textarea {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.services-grid .reveal:nth-child(1),
+.team-grid .reveal:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.services-grid .reveal:nth-child(2),
+.team-grid .reveal:nth-child(2) {
+  transition-delay: 90ms;
+}
+
+.services-grid .reveal:nth-child(3),
+.team-grid .reveal:nth-child(3) {
+  transition-delay: 180ms;
+}
+
+.services-grid .reveal:nth-child(4),
+.team-grid .reveal:nth-child(4) {
+  transition-delay: 270ms;
 }
 
 @media (max-width: 1000px) {
