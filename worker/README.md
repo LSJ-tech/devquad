@@ -5,6 +5,7 @@ Recibe el POST del formulario de contacto de [devquad.cl](https://devquad.cl) y 
 - **Ruta:** `devquad.cl/api/contact`
 - **Envía a:** la dirección configurada como `destination_address` en `wrangler.jsonc` (debe estar verificada en Cloudflare → Email → Email Routing → Destination addresses).
 - **Anti-spam:** honeypot (`_gotcha`) — si viene lleno, responde `ok` sin enviar nada.
+- **Rate limit:** máx. 5 solicitudes por minuto por IP (binding `CONTACT_LIMITER`), responde `429` si se excede.
 
 ## Desplegar
 

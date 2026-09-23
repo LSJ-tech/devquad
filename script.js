@@ -204,6 +204,8 @@ if (contactForm) {
       if (response.ok && data.ok) {
         button.textContent = 'Mensaje enviado';
         contactForm.reset();
+      } else if (response.status === 429) {
+        button.textContent = 'Espera un momento y reintenta';
       } else {
         button.textContent = 'Error, intenta de nuevo';
       }

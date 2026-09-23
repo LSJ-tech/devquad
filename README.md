@@ -52,7 +52,16 @@ python -m http.server 8000
 
 ## Formulario de contacto
 
-Sin servicios de terceros: el envío va por `fetch` a `/api/contact`, una ruta manejada por un [Cloudflare Worker propio](./worker) que manda el correo con el binding `send_email` de Cloudflare — nada se abre externamente, todo queda en la página. Incluye honeypot anti-spam.
+Sin servicios de terceros: el envío va por `fetch` a `/api/contact`, una ruta manejada por un [Cloudflare Worker propio](./worker) que manda el correo con el binding `send_email` de Cloudflare — nada se abre externamente, todo queda en la página. Incluye honeypot anti-spam y rate limiting (5 solicitudes/minuto por IP).
+
+## Flujo de contribución
+
+`master` está protegida: nadie pushea directo. El flujo es:
+
+1. Crear una rama (`nombre/lo-que-sea`).
+2. Hacer los cambios y subir la rama.
+3. Abrir un Pull Request hacia `master`.
+4. **Logan** ([@LSJ-tech](https://github.com/LSJ-tech), definido en [`.github/CODEOWNERS`](.github/CODEOWNERS)) tiene que aprobarlo antes de mergear.
 
 ## Hosting
 

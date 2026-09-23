@@ -28,6 +28,12 @@ export default {
       return jsonResponse({ ok: false, error: 'method_not_allowed' }, 405);
     }
 
+    const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+    const { success } = await env.CONTACT_LIMITER.limit({ key: ip });
+    if (!success) {
+      return jsonResponse({ ok: false, error: 'rate_limited' }, 429);
+    }
+
     let data;
     try {
       data = await request.json();
