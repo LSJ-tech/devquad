@@ -38,7 +38,8 @@ devquad/
 ├── img/                       favicons, íconos PWA, imagen para compartir (og-image.png)
 ├── devquad-logo(.svg|-dark.svg)  logo para modo claro y oscuro
 ├── robots.txt, sitemap.xml, site.webmanifest   SEO y PWA
-└── .sonarcloud.properties     configuración de análisis de código
+├── .sonarcloud.properties     configuración de análisis de código
+└── worker/                    Cloudflare Worker que envía el formulario de contacto
 ```
 
 ## Ejecutar localmente
@@ -51,7 +52,7 @@ python -m http.server 8000
 
 ## Formulario de contacto
 
-Sin backend ni servicios de terceros: al enviar, se arma un `mailto:` hacia `contacto@devquad.cl` (reenviado vía Cloudflare Email Routing a Outlook) con los datos del formulario, y se abre el cliente de correo del visitante para que lo envíe.
+Sin servicios de terceros: el envío va por `fetch` a `/api/contact`, una ruta manejada por un [Cloudflare Worker propio](./worker) que manda el correo con el binding `send_email` de Cloudflare — nada se abre externamente, todo queda en la página. Incluye honeypot anti-spam.
 
 ## Hosting
 

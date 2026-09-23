@@ -175,36 +175,46 @@ if ('IntersectionObserver' in window) {
 
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const button = contactForm.querySelector('button[type="submit"]');
-    const to = contactForm.dataset.mailto;
-    if (!button || !to) return;
-
-    const nombre = contactForm.nombre?.value || '';
-    const email = contactForm.email?.value || '';
-    const proyecto = contactForm.proyecto?.value || '';
-    const mensaje = contactForm.mensaje?.value || '';
-
-    const subject = proyecto ? `Consulta: ${proyecto}` : 'Consulta desde devquad.cl';
-    const body = [
-      `Nombre: ${nombre}`,
-      `Email: ${email}`,
-      proyecto ? `Proyecto: ${proyecto}` : null,
-      '',
-      mensaje,
-    ]
-      .filter((line) => line !== null)
-      .join('\n');
-
-    const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const endpoint = contactForm.dataset.endpoint;
+    if (!button || !endpoint) return;
 
     const defaultText = button.textContent;
-    button.textContent = 'Abriendo tu correo...';
-    window.location.href = mailtoUrl;
+    button.disabled = true;
+    button.textContent = 'Enviando...';
+
+    const payload = {
+      nombre: contactForm.nombre?.value || '',
+      email: contactForm.email?.value || '',
+      proyecto: contactForm.proyecto?.value || '',
+      mensaje: contactForm.mensaje?.value || '',
+      _gotcha: contactForm._gotcha?.value || '',
+    };
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json().catch(() => ({ ok: false }));
+
+      if (response.ok && data.ok) {
+        button.textContent = 'Mensaje enviado';
+        contactForm.reset();
+      } else {
+        button.textContent = 'Error, intenta de nuevo';
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario de contacto:', error);
+      button.textContent = 'Error, intenta de nuevo';
+    }
 
     window.setTimeout(() => {
       button.textContent = defaultText;
+      button.disabled = false;
     }, 2500);
   });
 }
