@@ -69,7 +69,7 @@ export default {
         replyTo: email,
       });
     } catch (error) {
-      console.error('send_failed:', error && error.message ? error.message : error);
+      console.error('send_failed:', error?.message ?? error);
       return jsonResponse({ ok: false, error: 'send_failed' }, 502);
     }
 
