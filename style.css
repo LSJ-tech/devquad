@@ -618,6 +618,13 @@ p {
   color: var(--muted);
 }
 
+.about-copy p,
+.contact-copy p,
+.legal-content p {
+  text-align: justify;
+  hyphens: auto;
+}
+
 .feature-list {
   list-style: none;
   padding: 0;
