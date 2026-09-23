@@ -953,16 +953,6 @@ textarea {
   width: 100%;
 }
 
-.hp-field {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .legal-content {
   max-width: 760px;
 }

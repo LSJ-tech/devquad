@@ -175,36 +175,36 @@ if ('IntersectionObserver' in window) {
 
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', async (event) => {
+  contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const button = contactForm.querySelector('button[type="submit"]');
-    if (!button) return;
+    const to = contactForm.dataset.mailto;
+    if (!button || !to) return;
+
+    const nombre = contactForm.nombre?.value || '';
+    const email = contactForm.email?.value || '';
+    const proyecto = contactForm.proyecto?.value || '';
+    const mensaje = contactForm.mensaje?.value || '';
+
+    const subject = proyecto ? `Consulta: ${proyecto}` : 'Consulta desde devquad.cl';
+    const body = [
+      `Nombre: ${nombre}`,
+      `Email: ${email}`,
+      proyecto ? `Proyecto: ${proyecto}` : null,
+      '',
+      mensaje,
+    ]
+      .filter((line) => line !== null)
+      .join('\n');
+
+    const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     const defaultText = button.textContent;
-    button.disabled = true;
-    button.textContent = 'Enviando...';
-
-    try {
-      const response = await fetch(contactForm.action, {
-        method: 'POST',
-        body: new FormData(contactForm),
-        headers: { Accept: 'application/json' },
-      });
-
-      if (response.ok) {
-        button.textContent = 'Mensaje enviado';
-        contactForm.reset();
-      } else {
-        button.textContent = 'Error, intenta de nuevo';
-      }
-    } catch (error) {
-      console.error('Error al enviar el formulario de contacto:', error);
-      button.textContent = 'Error, intenta de nuevo';
-    }
+    button.textContent = 'Abriendo tu correo...';
+    window.location.href = mailtoUrl;
 
     window.setTimeout(() => {
       button.textContent = defaultText;
-      button.disabled = false;
     }, 2500);
   });
 }

@@ -51,7 +51,7 @@ python -m http.server 8000
 
 ## Formulario de contacto
 
-Envía los mensajes vía [Formspree](https://formspree.io/), con un campo honeypot (`_gotcha`) para filtrar spam.
+Sin backend ni servicios de terceros: al enviar, se arma un `mailto:` hacia `contacto@devquad.cl` (reenviado vía Cloudflare Email Routing a Outlook) con los datos del formulario, y se abre el cliente de correo del visitante para que lo envíe.
 
 ## Hosting
 
