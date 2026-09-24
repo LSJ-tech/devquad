@@ -38,6 +38,8 @@ devquad/
 ├── img/                       favicons, íconos PWA, imagen para compartir (og-image.png)
 ├── devquad-logo(.svg|-dark.svg)  logo para modo claro y oscuro
 ├── robots.txt, sitemap.xml, site.webmanifest   SEO y PWA
+├── .well-known/security.txt   contacto para reportar vulnerabilidades (RFC 9116)
+├── _config.yml                 fuerza a Jekyll/GitHub Pages a publicar .well-known/
 ├── .sonarcloud.properties     configuración de análisis de código
 └── worker/                    Cloudflare Worker que envía el formulario de contacto
 ```
