@@ -13,7 +13,7 @@ function jsonResponse(body, status = 200) {
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     if (request.method === 'OPTIONS') {
       return new Response(null, {
         headers: {
@@ -60,18 +60,20 @@ export default {
       .filter((line) => line !== null)
       .join('\n');
 
-    try {
-      await env.EMAIL.send({
+    // env.EMAIL.send() tarda varios segundos en completarse. En vez de hacer
+    // esperar al visitante, respondemos altiro y el envío sigue en segundo
+    // plano con waitUntil; si falla, queda en los logs del Worker.
+    ctx.waitUntil(
+      env.EMAIL.send({
         to: TO_ADDRESS,
         from: FROM_ADDRESS,
         subject,
         text,
         replyTo: email,
-      });
-    } catch (error) {
-      console.error('send_failed:', error?.message ?? error);
-      return jsonResponse({ ok: false, error: 'send_failed' }, 502);
-    }
+      }).catch((error) => {
+        console.error('send_failed:', error?.message ?? error);
+      })
+    );
 
     return jsonResponse({ ok: true });
   },
