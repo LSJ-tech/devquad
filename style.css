@@ -882,14 +882,8 @@ p {
 }
 
 .team-card h3 {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0;
   font-size: 1.15rem;
-}
-
-.team-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
 }
 
 .contact {
