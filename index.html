@@ -39,8 +39,20 @@
     <link rel="icon" href="./favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
     <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="style.css?v=21" />
-    <script src="script.js?v=15" defer></script>
+    <link rel="stylesheet" href="style.css?v=22" />
+    <script src="script.js?v=16" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "DevQuad",
+        "url": "https://devquad.cl/",
+        "logo": "https://devquad.cl/devquad-logo.svg",
+        "email": "contacto@devquad.cl",
+        "description": "DevQuad es un equipo de desarrollo de software. Pensamos, desarrollamos y ejecutamos soluciones digitales a medida.",
+        "areaServed": "CL"
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
@@ -73,6 +85,7 @@
         <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
           <a href="#top" class="active">Inicio</a>
           <a href="#about">Nosotros</a>
+          <a href="#process">Proceso</a>
           <a href="#services">Servicios</a>
           <a href="#team">Equipo</a>
           <a href="#contact">Contacto</a>
@@ -164,6 +177,12 @@
               perder cohesión: todo el equipo participa en cada proyecto de
               principio a fin.
             </p>
+
+            <ul class="feature-list">
+              <li>Trato directo con el equipo que construye tu proyecto</li>
+              <li>Buenas prácticas de la industria desde el primer commit</li>
+              <li>Comunicación clara sobre alcance, tiempos y costo</li>
+            </ul>
           </div>
 
           <div class="about-visual reveal" aria-hidden="true">
@@ -180,6 +199,51 @@
                 <p class="terminal-line-success">✓ Deploy completado</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process" id="process">
+        <div class="container section-heading reveal">
+          <p class="kicker">Cómo trabajamos</p>
+          <h2>Un proceso claro, de principio a fin.</h2>
+        </div>
+
+        <div class="container process-grid">
+          <div class="process-step reveal">
+            <div class="process-number" aria-hidden="true">01</div>
+            <h3>Diagnóstico</h3>
+            <p>
+              Entendemos tu negocio, tus objetivos y tus restricciones antes
+              de proponer cualquier solución.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number" aria-hidden="true">02</div>
+            <h3>Diseño</h3>
+            <p>
+              Definimos arquitectura, alcance y experiencia de usuario antes
+              de escribir una línea de código.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number" aria-hidden="true">03</div>
+            <h3>Desarrollo</h3>
+            <p>
+              Construimos con control de versiones, revisión de código y las
+              mismas prácticas que exige la industria.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number" aria-hidden="true">04</div>
+            <h3>Entrega y soporte</h3>
+            <p>
+              Publicamos tu proyecto y seguimos disponibles para mantenerlo y
+              mejorarlo contigo.
+            </p>
           </div>
         </div>
       </section>
@@ -259,6 +323,50 @@
         </div>
       </section>
 
+      <section class="section faq" id="faq">
+        <div class="container section-heading reveal">
+          <p class="kicker">Preguntas frecuentes</p>
+          <h2>Antes de escribirnos, esto quizás ya responde tu duda.</h2>
+        </div>
+
+        <div class="container faq-list">
+          <details class="faq-item reveal">
+            <summary>¿Son un equipo nuevo? ¿Es seguro trabajar con ustedes?</summary>
+            <p>
+              Sí. Aplicamos los mismos estándares de calidad, control de
+              versiones y buenas prácticas que exige la industria en cada
+              proyecto, y mantenemos comunicación directa contigo durante
+              todo el proceso.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>¿Cómo cotizan un proyecto?</summary>
+            <p>
+              Nos cuentas qué necesitas a través del formulario de contacto,
+              conversamos brevemente sobre el alcance y te enviamos una
+              propuesta con tiempos y costo antes de partir.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>¿Trabajan con clientes fuera de Chile?</summary>
+            <p>
+              Sí, trabajamos de forma remota con clientes de toda
+              Latinoamérica.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>¿Qué pasa después de que el proyecto se entrega?</summary>
+            <p>
+              Ofrecemos mantenimiento y soporte continuo para que tu
+              producto siga funcionando y evolucionando.
+            </p>
+          </details>
+        </div>
+      </section>
+
       <section class="section contact" id="contact">
         <div class="container contact-wrap">
           <div class="contact-copy reveal">
@@ -309,12 +417,26 @@
         <p>© <span id="year"></span> DevQuad</p>
         <div class="footer-links">
           <a href="#about">Nosotros</a>
+          <a href="#process">Proceso</a>
           <a href="#services">Servicios</a>
           <a href="#team">Equipo</a>
+          <a href="#faq">FAQ</a>
           <a href="#contact">Contacto</a>
           <a href="./privacidad.html">Privacidad</a>
         </div>
       </div>
     </footer>
+
+    <a
+      class="whatsapp-fab"
+      href="https://wa.me/56937742898?text=Hola%20DevQuad%2C%20quiero%20conversar%20sobre%20un%20proyecto"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Escríbenos por WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.13c-.24.68-1.41 1.3-1.94 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.66-.6-2.92-1.26-4.82-4.2-4.97-4.4-.15-.2-1.19-1.58-1.19-3.02 0-1.44.75-2.14 1.02-2.43.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2.02.9 2.16.08.15.13.32.02.52-.1.2-.16.32-.31.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.45.29.15.46.13.63-.08.17-.2.72-.84.91-1.13.19-.29.38-.24.63-.15.26.1 1.63.77 1.91.91.28.15.47.22.53.34.07.13.07.75-.17 1.43Z"/>
+      </svg>
+    </a>
   </body>
 </html>
