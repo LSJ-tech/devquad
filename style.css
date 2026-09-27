@@ -780,7 +780,7 @@ p {
 }
 
 .browser-mock {
-  width: min(100%, 420px);
+  width: min(100%, 560px);
   border-radius: 18px;
   overflow: hidden;
   background: var(--panel);
@@ -822,25 +822,10 @@ p {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
-.browser-mock-body {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.7rem;
-  padding: 1.3rem;
-}
-
-.browser-mock-tile {
-  aspect-ratio: 1 / 0.7;
-  border-radius: 10px;
-  background: rgba(20, 33, 67, 0.08);
-}
-
-[data-theme="dark"] .browser-mock-tile {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.browser-mock-tile-accent {
-  background: var(--accent);
+.browser-mock-shot {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .portfolio-copy h3 {
