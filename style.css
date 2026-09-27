@@ -767,6 +767,110 @@ p {
   font-size: 0.95rem;
 }
 
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.portfolio-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.browser-mock {
+  width: min(100%, 420px);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-deep);
+}
+
+.browser-mock-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  background: rgba(20, 33, 67, 0.04);
+  border-bottom: 1px solid var(--line);
+}
+
+[data-theme="dark"] .browser-mock-bar {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.browser-mock-bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(20, 33, 67, 0.15);
+}
+
+[data-theme="dark"] .browser-mock-bar span {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.browser-mock-url {
+  margin-left: 0.6rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.browser-mock-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  padding: 1.3rem;
+}
+
+.browser-mock-tile {
+  aspect-ratio: 1 / 0.7;
+  border-radius: 10px;
+  background: rgba(20, 33, 67, 0.08);
+}
+
+[data-theme="dark"] .browser-mock-tile {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.browser-mock-tile-accent {
+  background: var(--accent);
+}
+
+.portfolio-copy h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.portfolio-copy p {
+  color: var(--muted);
+}
+
+.portfolio-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.portfolio-tags li {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
 .services {
   background: rgba(255, 255, 255, 0.35);
 }
@@ -1230,6 +1334,7 @@ textarea {
 @media (max-width: 900px) {
   .hero-grid,
   .about-grid,
+  .portfolio-grid,
   .contact-wrap {
     grid-template-columns: 1fr;
   }

@@ -29,7 +29,7 @@ Cuatro amigos de primer año de universidad, cada uno responsable de un área:
 
 ```
 devquad/
-├── index.html              página principal (Hero, Nosotros, Proceso, Servicios, Equipo, FAQ, Contacto)
+├── index.html              página principal (Hero, Nosotros, Proceso, Servicios, Portafolio, Equipo, FAQ, Contacto)
 ├── privacidad.html         política de privacidad
 ├── 404.html                página de error personalizada
 ├── style.css                estilos, modo claro/oscuro vía [data-theme]
@@ -51,6 +51,10 @@ No requiere instalación. Basta con abrir `index.html` en el navegador, o levant
 ```bash
 python -m http.server 8000
 ```
+
+## Portafolio
+
+El primer producto propio del equipo, [PataAgenda](https://patagenda.devquad.cl), un SaaS de agenda y reservas online para peluquerías de mascotas, está destacado en la sección Portafolio del sitio.
 
 ## Formulario de contacto
 
