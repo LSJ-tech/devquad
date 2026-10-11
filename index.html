@@ -39,7 +39,7 @@
     <link rel="icon" href="./favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
     <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="style.css?v=24" />
+    <link rel="stylesheet" href="style.css?v=25" />
     <script src="script.js?v=16" defer></script>
     <script type="application/ld+json">
       {
@@ -298,53 +298,116 @@
       <section class="section portfolio" id="portfolio">
         <div class="container section-heading reveal">
           <p class="kicker">Portafolio</p>
-          <h2>Nuestro primer producto ya está en producción.</h2>
+          <h2>Dos productos propios, ya en producción.</h2>
         </div>
 
-        <div class="container portfolio-grid">
-          <div class="portfolio-visual reveal">
-            <div class="browser-mock">
-              <div class="browser-mock-bar">
-                <span></span>
-                <span></span>
-                <span></span>
-                <div class="browser-mock-url">patagenda.devquad.cl</div>
+        <div class="container portfolio-list">
+          <div class="portfolio-grid">
+            <div class="portfolio-visual reveal">
+              <div class="browser-mock">
+                <div class="browser-mock-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <div class="browser-mock-url">patagenda.devquad.cl</div>
+                </div>
+                <img
+                  class="browser-mock-shot"
+                  src="./img/pataagenda-hero.webp"
+                  alt="Página de inicio de PataAgenda, plataforma de agenda para peluquerías de mascotas"
+                  loading="lazy"
+                  width="1200"
+                  height="471"
+                />
               </div>
-              <img
-                class="browser-mock-shot"
-                src="./img/pataagenda-hero.webp"
-                alt="Página de inicio de PataAgenda, plataforma de agenda para peluquerías de mascotas"
-                loading="lazy"
-                width="1200"
-                height="471"
-              />
+            </div>
+
+            <div class="portfolio-copy reveal">
+              <h3>PataAgenda</h3>
+              <p>
+                Plataforma de agenda y reservas online para peluquerías de
+                mascotas. Cada negocio administra sus propios clientes,
+                mascotas, servicios y horarios, y sus clientes reservan hora
+                solos, sin llamadas ni WhatsApp de ida y vuelta.
+              </p>
+
+              <ul class="portfolio-tags">
+                <li>Django</li>
+                <li>PostgreSQL</li>
+                <li>Mercado Pago</li>
+                <li>Multi-negocio</li>
+              </ul>
+
+              <a
+                class="btn btn-secondary"
+                href="https://patagenda.devquad.cl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visitar PataAgenda
+              </a>
             </div>
           </div>
 
-          <div class="portfolio-copy reveal">
-            <h3>PataAgenda</h3>
-            <p>
-              Plataforma de agenda y reservas online para peluquerías de
-              mascotas. Cada negocio administra sus propios clientes,
-              mascotas, servicios y horarios, y sus clientes reservan hora
-              solos, sin llamadas ni WhatsApp de ida y vuelta.
-            </p>
+          <div class="portfolio-grid">
+            <div class="portfolio-copy reveal">
+              <h3>SecurApp Copropiedad</h3>
+              <p>
+                Plataforma de gestión para condominios y juntas de vecinos:
+                botón de pánico que alerta a todo el condominio al instante,
+                avisos, control de accesos, gastos comunes y liquidaciones de
+                sueldo del personal. Ya en uso real en Población Empart
+                (Valparaíso).
+              </p>
 
-            <ul class="portfolio-tags">
-              <li>Django</li>
-              <li>PostgreSQL</li>
-              <li>Mercado Pago</li>
-              <li>Multi-negocio</li>
-            </ul>
+              <ul class="portfolio-tags">
+                <li>Django</li>
+                <li>PostgreSQL</li>
+                <li>PWA</li>
+                <li>Multi-condominio</li>
+              </ul>
 
-            <a
-              class="btn btn-secondary"
-              href="https://patagenda.devquad.cl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visitar PataAgenda
-            </a>
+              <a
+                class="btn btn-secondary"
+                href="https://securapp.devquad.cl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visitar SecurApp
+              </a>
+            </div>
+
+            <div class="portfolio-visual reveal">
+              <div class="browser-mock">
+                <div class="browser-mock-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <div class="browser-mock-url">securapp.devquad.cl</div>
+                </div>
+                <div class="panel-mock" aria-hidden="true">
+                  <div class="panel-mock-sidebar">
+                    <div class="panel-mock-link active">Alertas</div>
+                    <div class="panel-mock-link">Avisos</div>
+                    <div class="panel-mock-link">Gastos comunes</div>
+                    <div class="panel-mock-link">Accesos</div>
+                    <div class="panel-mock-link">Personal</div>
+                  </div>
+                  <div class="panel-mock-main">
+                    <div class="panel-mock-alert">
+                      <span class="panel-mock-alert-dot"></span>
+                      <div>
+                        <strong>Alerta activa</strong>
+                        <span>Block 9, depto 54 · hace 2 min</span>
+                      </div>
+                    </div>
+                    <div class="panel-mock-row"></div>
+                    <div class="panel-mock-row"></div>
+                    <div class="panel-mock-row short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
