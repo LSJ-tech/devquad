@@ -16,11 +16,11 @@ Landing page de **DevQuad**, equipo de desarrollo de software. Sitio estático e
 
 ## Equipo
 
-Cuatro amigos de primer año de universidad, cada uno responsable de un área:
+Cuatro compañeros de universidad. Logan Silva es el jefe de proyecto y el contacto directo con cada cliente; todos programan, y cada uno es responsable de un área:
 
 | Nombre | Área |
 |---|---|
-| **Logan Silva** | Frontend |
+| **Logan Silva** | Jefe de proyecto |
 | **Maximiliano Montoya** | Backend & API |
 | **Gianni Antonietti** | Infraestructura & Deploy |
 | **Camilo Sepúlveda** | QA & Contenido |
@@ -54,7 +54,7 @@ python -m http.server 8000
 
 ## Portafolio
 
-El primer producto propio del equipo, [PataAgenda](https://patagenda.devquad.cl), un SaaS de agenda y reservas online para peluquerías de mascotas, está destacado en la sección Portafolio del sitio.
+La sección Portafolio muestra dos productos propios del equipo que hoy están en línea: [Pegazo](https://pegazo.devquad.cl), plataforma que conecta a vecinos con maestros verificados de su comuna, y [Mi Barrio+](https://securapp.devquad.cl), plataforma de seguridad y gestión para condominios.
 
 ## Formulario de contacto
 
