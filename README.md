@@ -16,14 +16,7 @@ Landing page de **DevQuad**, equipo de desarrollo de software. Sitio estático e
 
 ## Equipo
 
-Cuatro compañeros de universidad. Logan Silva es el jefe de proyecto y el contacto directo con cada cliente; todos programan, y cada uno es responsable de un área:
-
-| Nombre | Área |
-|---|---|
-| **Logan Silva** | Jefe de proyecto |
-| **Maximiliano Montoya** | Backend & API |
-| **Gianni Antonietti** | Infraestructura & Deploy |
-| **Camilo Sepúlveda** | QA & Contenido |
+Cuatro compañeros de universidad: **Logan Silva**, **Gianni Antonietti**, **Camilo Sepúlveda** y **Maximiliano Montoya**. Todos programan, y un jefe de proyecto es el contacto directo con cada cliente.
 
 ## Estructura
 

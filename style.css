@@ -1092,13 +1092,6 @@ p {
   margin-bottom: 0;
   font-size: 1.15rem;
 }
-
-.team-role {
-  margin: 0.35rem 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
 .faq {
   background: rgba(255, 255, 255, 0.35);
 }
